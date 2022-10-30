@@ -129,7 +129,12 @@ friends: [
     },{
         title: "git写博",
         href: "https://github.com/jxqt/jxqt.github.io/tree/master/_posts"
+    } ,{
+        title: "梁山立鸿二手设备买卖",
+        href: "https://v.kuaishou.com/zRZMUU"
     }
+
+
 ]
 
 theme: jekyll-theme-cayman

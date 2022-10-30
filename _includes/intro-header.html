@@ -6,7 +6,9 @@
 {% if include.type == 'post' %}
 <style type="text/css">
     header.intro-header{
-        position: relative;background: {{ page.header-bg-css }};
+        position: relative;
+        background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}');
+        background: {{ page.header-bg-css }};
     }
 
     {% if page.header-mask %}
@@ -23,6 +25,12 @@
 {% else %}
 <header class="intro-header" >
 {% endif %}
+    <div class="header-mask"></div>
+    {% if page.header-img-credit %}
+    <div class="header-img-credit">
+        Image by <a href="//{{page.header-img-credit-href}}">{{page.header-img-credit}}</a>
+    </div>
+    {% endif %}
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -43,8 +51,21 @@
 </header>
 {% endif %}
 
-
-
+{% if include.type == 'keynote' %}
+<style type="text/css">
+    header.intro-header{
+        height: 500px;
+        overflow: hidden;
+    }
+    header.intro-header .container{
+        visibility: hidden; 
+    }
+    header iframe{
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+</style>
 <header class="intro-header" >
     <iframe src="{{page.iframe}}"></iframe>
     <!-- keep for SEO -->
@@ -62,8 +83,7 @@
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}
                         on {{ page.date | date: "%B %-d, %Y" }}</span>
-                
-</div>
+                </div>
             </div>
         </div>
     </div>

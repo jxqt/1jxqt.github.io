@@ -1,8 +1,8 @@
 # Site settings
 title: Jxqt Blog
 SEOTitle: 今星期天的博客 | Jxqt Blog
-header-img: img/home-bg.jpg
-email: huxpro@gmail.com
+# header-img: 
+email: zjkgf@163.com
 description: "关于程序与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
 keyword: "今星期天, 星期天, Jxqt, 周天, 礼拜天, @周日, 今星期天的博客, jxqt Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
 url: "https://jxqt.github.io"              # your host, for absolute URL
@@ -53,10 +53,10 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: hux
+# disqus_username: hux
 
 # Netease settings
-netease_comment: false
+# netease_comment: false
 
 
 
@@ -73,7 +73,7 @@ ga_domain: huangxuan.me
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "For the next quantum leap<br>离开世界之前，一切都是过程"
-sidebar-avatar: /img/avatar-hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+# sidebar-avatar: /img/avatar-hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -97,6 +97,9 @@ page-mathjax: false
 # Friends
 friends: [
     {
+      title: "薰衣草，洋",
+      href: "https://v.kuaishou.com/zHs3qD"
+    },{
       title: "wpys168",
       href: "http://sj.ysupan.com/zjkgf"
     },{

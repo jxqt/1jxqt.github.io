@@ -35,7 +35,12 @@
 .sidebar-container .tags a:active {
   border-color: #0085a1;
 }
-
+.sidebar-container .short-about img {
+  width: 80%;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
 .sidebar-container .short-about p {
   margin-top: 0px;
   margin-bottom: 20px;
@@ -1686,3 +1691,4 @@ img::-moz-selection {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
+

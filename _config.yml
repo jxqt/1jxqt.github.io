@@ -12,11 +12,7 @@ baseurl: ""                             # for example, '/blog' if your blog host
 future: true
 
 # SNS settings
-RSS: false
-weibo_username:     rpza
-zhihu_username:     Ksir
-github_username:    jxqt
-twitter_username:   xqtmt
+RSS: true
 
 
 Build settings:      7

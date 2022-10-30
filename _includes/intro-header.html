@@ -24,10 +24,8 @@
 <header class="intro-header" >
 {% endif %}
     <div class="header-mask"></div>
-    {% if page.header-img-credit %}
-    <div class="header-img-credit">
-        Image by <a href="//{{page.header-img-credit-href}}">{{page.header-img-credit}}</a>
-    </div>
+   
+
     {% endif %}
     <div class="container">
         <div class="row">
@@ -49,21 +47,7 @@
 </header>
 {% endif %}
 
-{% if include.type == 'keynote' %}
-<style type="text/css">
-    header.intro-header{
-        height: 500px;
-        overflow: hidden;
-    }
-    header.intro-header .container{
-        visibility: hidden; 
-    }
-    header iframe{
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
-</style>
+
 <header class="intro-header" >
     <iframe src="{{page.iframe}}"></iframe>
     <!-- keep for SEO -->

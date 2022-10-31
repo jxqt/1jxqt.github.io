@@ -219,7 +219,7 @@ self.addEventListener('fetch', event => {
 function sendMessageToAllClients(msg) {
   self.clients.matchAll().then(clients => {
     clients.forEach(client => {
-      console.log(client);
+      // console.log(client);
       client.postMessage(msg)
     })
   })

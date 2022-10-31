@@ -1,5 +1,5 @@
-//* ===========================================================
- //* sw.js
+/* ===========================================================
+ * sw.js
  * ===========================================================
  * Copyright 2016 @huxpro
  * Licensed under Apache 2.0
@@ -19,6 +19,10 @@ const PRECACHE_LIST = [
   "./js/bootstrap.min.js",
   "./js/hux-blog.min.js",
   "./js/snackbar.js",
+  "./img/icon_wechat.png",
+  "./img/avatar-hux.jpg",
+  "./img/home-bg.jpg",
+  "./img/404-bg.jpg",
   "./css/hux-blog.min.css",
   "./css/bootstrap.min.css"
   // "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css",
@@ -119,7 +123,8 @@ self.addEventListener('activate', event => {
       .filter(cacheName => DEPRECATED_CACHES.includes(cacheName))
       .map(cacheName => caches.delete(cacheName))
   ))
-event.waitUntil(self.clients.claim());
+  console.log('service worker activated.')
+  event.waitUntil(self.clients.claim());
 });
 
 
@@ -206,7 +211,7 @@ self.addEventListener('fetch', event => {
     if (isNavigationReq(event.request)) {
       // you need "preserve logs" to see this log
       // cuz it happened before navigating
-  
+      console.log(`fetch ${event.request.url}`)
       event.waitUntil(revalidateContent(cached, fetchedCopy))
     }
   }
@@ -219,7 +224,7 @@ self.addEventListener('fetch', event => {
 function sendMessageToAllClients(msg) {
   self.clients.matchAll().then(clients => {
     clients.forEach(client => {
-      // console.log(client);
+      console.log(client);
       client.postMessage(msg)
     })
   })
@@ -249,13 +254,16 @@ function revalidateContent(cachedResp, fetchedResp) {
   // revalidate when both promise resolved
   return Promise.all([cachedResp, fetchedResp])
     .then(([cached, fetched]) => {
-      // const cachedVer = cached.headers.get('last-modified')
+      const cachedVer = cached.headers.get('last-modified')
       const fetchedVer = fetched.headers.get('last-modified')
+      console.log(`"${cachedVer}" vs. "${fetchedVer}"`);
       if (cachedVer !== fetchedVer) {
         sendMessageToClientsAsync({
           'command': 'UPDATE_FOUND',
           'url': fetched.url
+
         })
       }
     })
+    .catch(err => console.log(err))
 }

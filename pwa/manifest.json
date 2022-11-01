@@ -2,18 +2,11 @@
   "name": "Jxqt",
   "short_name": "Jxqt Blog",
   "description": "About an engineer & designer who loves web.",
-  "icons": [{
-    "src": "",
-    "sizes": "128x128",
-    "type": "image/png"
-  }, {
-    "src": "",
-    "sizes": "512x512",
-    "type": "image/png"
-  }],
+ 
   "background_color": "#fff",
   "theme_color": "#000",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait"
 }
+

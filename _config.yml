@@ -20,7 +20,7 @@ paginate: 5
 # 下面👇不包括中括号里的内容
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
 # 👇 anchor.js 是简单且有用的 jQuery 插件，为所有本地链接提供一个平滑的动画，然后跳转到页面的任意一个元素
-anchorjs: false                          
+anchorjs: true                         
 # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
 # timezone: CN  

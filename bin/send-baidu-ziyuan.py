@@ -7,7 +7,7 @@ CONVERTDIR = "../../public/"
 YEAR="2020"
 
 BLOG_URL="https://jxqt.github.io/"
-BAIDU_URL="http://data.zz.baidu.com/urls?site=https://jueee.github.io&token=CKhNUxDRh21xsFP3"
+BAIDU_URL="http://data.zz.baidu.com/urls?site=https://jxqt.github.io&token=z1odFbPslBuXwI1C"
 
 def getBlogAddress():
     blogs = []

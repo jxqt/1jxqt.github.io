@@ -6,21 +6,22 @@ email: zjkgf@163.com
 description: "关于程序与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
 keyword: "今星期天, 星期天, Jxqt, 周天, 礼拜天, @周日, 今星期天的博客, jxqt Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
 url: "https://jxqt.github.io"              # your host, for absolute URL
-# baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
 future: true
 
 # SNS settings
-RSS: false
+RSS: true
+
+
+Build settings:      7
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 # highlighter: rouge
-# permalink: pretty
-paginate: 5
-# 下面👇不包括中括号里的内容
+permalink: pretty
+paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
-# 👇 anchor.js 是简单且有用的 jQuery 插件，为所有本地链接提供一个平滑的动画，然后跳转到页面的任意一个元素
-anchorjs: true                         
+anchorjs: true                          
 # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
 # timezone: CN  
@@ -34,11 +35,10 @@ anchorjs: true
 # make sure you have this gem installed
 # `$ gem install jekyll-paginate`
 # gems: [jekyll-paginate]
-# 下面行👇为分页插件
 plugins: [jekyll-paginate]
 
 
-# 下面👇为轻量级编辑语言设置
+
 # Markdown settings
 # replace redcarpet to kramdown,
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
@@ -63,6 +63,7 @@ kramdown:
 # netease_comment: false
 
 
+
 # Analytics settings
 # Baidu Analytics 
 # ba_track_id: [your track id]
@@ -85,7 +86,7 @@ featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
 
-# 👇 漸進式網路應用程式是一種普通網頁或網站架構起來的網路應用程式，但它可以以傳統應用程式或原生行動應用程式形式展示給使用者。這種應用程式形態視圖將目前最為現代化的瀏覽器提供的功能與行動裝置的體驗優勢相結合。
+
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
 service-worker: true
@@ -93,8 +94,8 @@ service-worker: true
 
 
 # MathJax rendering for layout:page (e.g. post preview)
-# MathJax是一個跨瀏覽器的JavaScript 程式庫，它使用MathML、LaTeX和ASCIIMathML標記在Web瀏覽器中顯示數學符號。MathJax是在Apache授權條款下作為開源軟體發布的。
 page-mathjax: false
+
 
 
 

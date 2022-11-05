@@ -62,7 +62,11 @@ kramdown:
 # Netease settings
 # netease_comment: false
 
-
+# 自动生成sitemap
+sitemap:
+    path: sitemap.xml
+baidusitemap:
+    path: baidusitemap.xml
 
 # Analytics settings
 # Baidu Analytics 

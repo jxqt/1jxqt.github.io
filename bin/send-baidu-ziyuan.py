@@ -4,7 +4,6 @@ from urllib.request import quote
 
 
 CONVERTDIR = "../../public/"
-YEAR="2020"
 
 BLOG_URL="https://jxqt.github.io/"
 BAIDU_URL="http://data.zz.baidu.com/urls?site=https://jxqt.github.io&token=z1odFbPslBuXwI1C"

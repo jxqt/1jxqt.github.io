@@ -6,7 +6,7 @@ from urllib.request import quote
 CONVERTDIR = "../../public/"
 YEAR="2020"
 
-BLOG_URL="https://jueee.github.io/"
+BLOG_URL="https://jxqt.github.io/"
 BAIDU_URL="http://data.zz.baidu.com/urls?site=https://jueee.github.io&token=CKhNUxDRh21xsFP3"
 
 def getBlogAddress():

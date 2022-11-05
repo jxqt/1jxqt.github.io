@@ -6,7 +6,7 @@
                <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
                     <br>
-                    Powered by <a href="http://jxqt.github.io">微信号ajtdjt</a>
+                    Powered by <a href="http://jxqt.github.io">Jxqt Blog</a>
                 </p>
             </div>
         </div>
@@ -29,7 +29,6 @@
 <script src="{{ "/js/snackbar.js " | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/sw-registration.js " | prepend: site.baseurl }}"></script>
 {% endif %}
-
 
 <!-- async load function -->
 <script>
@@ -60,9 +59,8 @@
 
 <!--fastClick.js -->
 <script>
-    async("/js/1.js", function(){
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
         var $nav = document.querySelector("nav");
         if($nav) FastClick.attach($nav);
     })
 </script>
-
